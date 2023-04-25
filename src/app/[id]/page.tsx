@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -7,9 +8,11 @@ type Props = {
 const Post = ({ params }: Props) => {
   const { id } = params;
   return (
-    <div>
-      <div>Post</div>
-      <div>Post {id}</div>
+    <div className="flex flex-col gap-2">
+      <Link className="underline text-blue-800" href="/">
+        Back
+      </Link>
+      <div>This is post number {id}</div>
     </div>
   );
 };
