@@ -14,4 +14,6 @@ const Post = ({ params }: Props) => {
   );
 };
 
+export const revalidate = 120;
+
 export default Post;
