@@ -13,6 +13,8 @@ export async function generateStaticParams() {
   ];
 }
 
+export const revalidate = 20;
+
 const Post = ({ params }: Props) => {
   const { id } = params;
   return (
@@ -20,11 +22,11 @@ const Post = ({ params }: Props) => {
       <Link className="underline text-blue-800" href="/">
         Back
       </Link>
-      <div>This is post number {id}</div>
+      <div>
+        This is post number {id} {new Date().toString()}{" "}
+      </div>
     </div>
   );
 };
-
-export const revalidate = 120;
 
 export default Post;
