@@ -5,6 +5,14 @@ type Props = {
   params: { id: string };
 };
 
+export async function generateStaticParams() {
+  return [
+    {
+      id: "1",
+    },
+  ];
+}
+
 const Post = ({ params }: Props) => {
   const { id } = params;
   return (
