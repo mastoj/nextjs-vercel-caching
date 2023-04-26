@@ -6,11 +6,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return [
-    // {
-    //   id: "1",
-    // },
-  ];
+  return [];
 }
 
 export const revalidate = 20;
@@ -23,7 +19,7 @@ const Post = ({ params }: Props) => {
         Back
       </Link>
       <div>
-        This is post number {id} {new Date().toString()}{" "}
+        This is cached number {id} {new Date().toString()}{" "}
       </div>
     </div>
   );
