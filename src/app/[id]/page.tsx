@@ -5,13 +5,13 @@ type Props = {
   params: { id: string };
 };
 
-// export async function generateStaticParams() {
-//   return [
-//     {
-//       id: "1",
-//     },
-//   ];
-// }
+export async function generateStaticParams() {
+  return [
+    // {
+    //   id: "1",
+    // },
+  ];
+}
 
 export const revalidate = 20;
 
